@@ -3,16 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ДТП Информатор — уведомления о новых ДТП для аварийных комиссаров</title>
+  <title>ДТП Информатор - уведомления о новых ДТП для аварийных комиссаров</title>
   <meta name="description" content="Ваши комиссары первыми узнают о новых ДТП в городе: уведомление с адресом и координатами приходит в чат службы через несколько минут. В удобном мессенджере. 14 дней бесплатно.">
   <meta name="theme-color" content="#0b1220">
 
   <!-- Open Graph. ВАЖНО: после деплоя заменить og:url и og:image на абсолютные адреса домена -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ДТП Информатор — комиссары узнают о ДТП первыми">
+  <meta property="og:title" content="ДТП Информатор - комиссары узнают о ДТП первыми">
   <meta property="og:description" content="Уведомление о новом ДТП приходит в чат вашей службы через несколько минут. В удобном мессенджере. 14 дней бесплатно.">
   <meta property="og:image" content="assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Микроразметка Schema.org: FAQPage. Содержимое должно совпадать с текстами секции #faq -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Нужно ли устанавливать приложение или сайт?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Всё происходит внутри привычного мессенджера: вы добавляете бота в чат - и уведомления приходят туда же, где вы и так общаетесь с бригадой. Работает на любом телефоне, включая старые Android и кнопочные смартфоны с поддержкой мессенджеров." }
+      },
+      {
+        "@type": "Question",
+        "name": "Нужно ли что-то устанавливать и настраивать?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Нет. Всё подключим и настроим сами - от вас нужен только мессенджер, в который будут приходить уведомления." }
+      },
+      {
+        "@type": "Question",
+        "name": "Насколько быстро приходит уведомление?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Обычно 1-8 минут с момента аварии: система замечает событие, отсекает повторы и сразу отправляет карточку в чат. Мониторинг круглосуточный - ночью и в выходные так же." }
+      },
+      {
+        "@type": "Question",
+        "name": "В какие мессенджеры можно подключить бота?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Сейчас можно подключить ВКонтакте и MAX. Скоро добавим поддержку и остальных популярных мессенджеров." }
+      },
+      {
+        "@type": "Question",
+        "name": "Кто ещё получает уведомления по нашему городу?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Никто. Для эксклюзивности мы подключаем только одну службу комиссаров в городе - у ваших конкурентов не будет доступа к уведомлениям по вашему городу. Поэтому иногда бывает лист ожидания: напишите нам и проверьте, свободен ли ещё ваш город." }
+      },
+      {
+        "@type": "Question",
+        "name": "Мы работаем в нескольких городах. Так можно?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Да. Для каждого города - свой чат: комиссары каждого города видят только свои ДТП." }
+      },
+      {
+        "@type": "Question",
+        "name": "Это законно? Не «слив» ли это данных ГИБДД?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Это законно. Мы работаем только с открытой публичной информацией о дорожных событиях и не имеем доступа к закрытым базам и персональным данным." }
+      },
+      {
+        "@type": "Question",
+        "name": "Что нужно, чтобы начать, и сколько это займёт времени?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Просто напишите нам в мессенджере - мы подключим вас за 15 минут, без оплаты и договоров." }
+      },
+      {
+        "@type": "Question",
+        "name": "Что будет через 14 дней?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Закончится тестовый период. Если система вам понравилась - предложим оплатить первый месяц, если нет - просто прекратим сотрудничество: без автопродлений и списаний." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Микроразметка Schema.org: отзывы. ВАЖНО: перед публикацией замените примеры на реальные отзывы клиентов -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ДТП Информатор",
+    "description": "Сервис оповещения аварийных комиссаров о новых ДТП в их городе. Уведомление с адресом и координатами приходит в чат службы через несколько минут.",
+    "areaServed": "RU",
+    "review": [
+      {
+        "@type": "Review",
+        "reviewBody": "Информация о ДТП приходила отрывками от разных людей - кто-то скинет адрес, кто-то нет, и проверять некому. Сейчас бот присылает адрес - и экипаж едет. За первый месяц теста забрали 16 оформлений, которые раньше бы ушли конкурентам.",
+        "author": { "@type": "Person", "name": "Андрей С." }
+      },
+      {
+        "@type": "Review",
+        "reviewBody": "Раньше узнавали об авариях от случайных источников - где-то кто-то скинет, где-то нет - и часто приезжали уже вторыми. С ДТП Информатором в большинстве случаев первыми на месте оказываемся мы - за два месяца выездов стало заметно больше.",
+        "author": { "@type": "Person", "name": "Дмитрий К." }
+      },
+      {
+        "@type": "Review",
+        "reviewBody": "Подключили сразу три города - для каждого свой чат. Раньше сообщения о ДТП приходили из непроверенных источников, и часть из них оказывалась ложной. Теперь система сама присылает адрес и координаты, работает и ночью, и в выходные.",
+        "author": { "@type": "Person", "name": "Ольга М." }
+      }
+    ]
+  }
+  </script>
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
@@ -21,7 +104,7 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a class="logo" href="#top" aria-label="ДТП Информатор — на главную">
+      <a class="logo" href="#top" aria-label="ДТП Информатор - на главную">
         <img class="logo__mark" src="assets/logo-mark.png" alt="" width="44" height="38">
         <span class="logo__text">
           <strong>ДТП&nbsp;Информатор</strong>
@@ -32,6 +115,7 @@
         <a href="#value">Преимущество</a>
         <a href="#how">Как работает</a>
         <a href="#trial">Тест 14 дней</a>
+        <a href="#reviews">Отзывы</a>
         <a href="#faq">Вопросы</a>
         <button class="btn btn--primary btn--sm" type="button" data-modal>Подключить</button>
       </nav>
@@ -56,16 +140,17 @@
       </div>
 
       <div class="container hero__inner">
+        <div class="hero__content">
         <p class="hero__kicker reveal">🚨 Будьте первыми на месте ДТП!</p>
-        <h1 class="hero__title reveal">Ваши комиссары будут узнавать о новых ДТП <em>первыми</em></h1>
+        <h1 class="hero__title reveal">Узнавайте о&nbsp;ДТП в&nbsp;вашем городе <em>первыми!</em></h1>
         <p class="hero__lead reveal">
-          ДТП Информатор следит за&nbsp;новыми ДТП в&nbsp;вашем городе и&nbsp; отправляет уведомление в чат службы: время, адрес и координаты.
-          Комиссары сразу видят, куда ехать, — и выезжают раньше всех.
+          ДТП Информатор - это бот в&nbsp;вашем рабочем чате. Он присылает туда данные о&nbsp;ДТП, которые произошли в&nbsp;городе прямо сейчас: адрес, координаты, и&nbsp;ссылка на маршрут. Вы читаете чат, выезжаете быстрее конкурентов и&nbsp;оформляете ДТП.
         </p>
         <div class="hero__actions reveal">
-          <button class="btn btn--primary btn--lg" type="button" data-modal>Попробовать бесплатно</button>
-          <a class="btn btn--ghost btn--lg" href="#how">Как это работает</a>
+          <button class="btn btn--primary btn--lg" type="button" data-modal>Написать в мессенджере</button>
+          <a class="btn btn--ghost btn--lg" href="#how">Как это работает?</a>
         </div>
+        <p class="hero__note reveal">Ответим за 15 минут</p>
 
         <ul class="msn reveal" aria-label="Связаться в мессенджере">
           <!-- Ссылки-заглушки: заменить # на реальные контакты -->
@@ -81,46 +166,116 @@
             <dd>бесплатный тест для вашей службы</dd>
           </div>
           <div class="stat">
-            <dt><span data-count="24">0</span>/7</dt>
-            <dd>следим за городом без выходных</dd>
+            <dt><span data-count="10" data-suffix="+">0</span> городов</dt>
+            <dd>уже следим за ДТП круглосуточно</dd>
           </div>
           <div class="stat">
-            <dt>Мгновенное оповещение</dt>
-            <dd>получайте уведомления о&nbsp;ДТП в первые минуты</dd>
+            <dt>3–7 минут</dt>
+            <dd>средняя скорость оповещения</dd>
           </div>
         </dl>
+        </div>
+
+        <div class="hero__phone">
+          <div class="phone reveal">
+            <div class="phone__frame">
+              <div class="phone__screen">
+                <div class="phone__notch" aria-hidden="true"></div>
+                <div class="phone__status">
+                  <span>16:26</span>
+                  <span class="phone__icons" aria-hidden="true">
+                    <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0.5" width="3" height="11.5" rx="1"/></svg>
+                    <svg viewBox="0 0 16 12"><path d="M8 11.4 5.7 8.6a3.7 3.7 0 0 1 4.6 0L8 11.4Z"/><path d="M2.2 5.1a8.2 8.2 0 0 1 11.6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <svg viewBox="0 0 26 12"><rect x="0.8" y="0.8" width="21" height="10.4" rx="3" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.8"/><rect x="23.2" y="4" width="2.2" height="4" rx="1.1"/></svg>
+                  </span>
+                </div>
+
+                <div class="phone__head">
+                  <span class="phone__avatar" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="10" x2="12" y2="14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.1" fill="currentColor"/></svg>
+                  </span>
+                  <div class="phone__head-text">
+                    <strong>Чат вашей службы</strong>
+                    <small><span class="online" aria-hidden="true"></span>ДТП Информатор · бот · 6 участников</small>
+                  </div>
+                </div>
+
+                <div class="phone__body">
+                  <div class="msg msg--bot msg--alert">
+                    <div class="msg__title msg__title--alert">🚨 НОВОЕ ДТП</div>
+                    <div class="msg__address">ул. Энтузиастов, 7</div>
+                    <span class="msg__btn">🛣 Построить маршрут</span>
+                  </div>
+
+                  <div class="msg msg--crew">
+                    <div class="msg__meta"><b>Экипаж 1</b><time>16:20</time></div>
+                    <p>Приняли, выезжаем 🚑</p>
+                  </div>
+
+                  <div class="msg msg--crew">
+                    <div class="msg__meta"><b>Экипаж 1</b><time>16:20</time></div>
+                    <p>На месте. Оформляем ✅</p>
+                  </div>
+
+                  <div class="msg msg--bot msg--alert msg--fresh">
+                    <div class="msg__title msg__title--alert">🚨 НОВОЕ ДТП</div>
+                    <div class="msg__address">ул. Садовая, 3</div>
+                    <span class="msg__btn">🛣 Построить маршрут</span>
+                  </div>
+
+                  <div class="msg msg--crew">
+                    <div class="msg__meta"><b>Экипаж 3</b><time>16:20</time></div>
+                    <p>Приняли, выезжаем 🚑</p>
+                  </div>
+
+                  <div class="msg msg--crew">
+                    <div class="msg__meta"><b>Экипаж 3</b><time>16:20</time></div>
+                    <p>На месте. Оформляем ✅</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- ─── Бегущая строка: лента последних ДТП ──────────────────────── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__row" data-ticker>
+        <!-- Пункты генерирует main.js (данные-примеры: замените улицы на реальные) -->
+      </div>
+    </div>
 
     <!-- ─── Преимущество ─────────────────────────────────────────────── -->
     <section class="section" id="value">
       <div class="container">
-        <h2 class="section__title reveal">Кто приехал первым — <em>у того и заказ</em></h2>
+        <h2 class="section__title reveal">Почему это нужно <em>вашей организации?</em></h2>
         <p class="section__lead reveal">
-          Человек после аварии не выбирает комиссара в интернете — он соглашается
-          на помощь того, кто уже приехал. Поэтому важно узнать о ДТП как можно раньше.
+          Человек после аварии не выбирает комиссара в интернете - он соглашается
+          на помощь того, кто уже приехал. Поэтому важно узнать о&nbsp;ДТП быстрее конкурентов.
         </p>
         <div class="grid grid--3">
           <article class="card reveal">
             <div class="card__icon card__icon--red" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
             </div>
-            <h3>Больше заказов</h3>
-            <p>Уведомление приходит в первые минуты — ваш экипаж успевает приехать раньше других.</p>
+            <h3>Больше оформлений ДТП</h3>
+            <p>Уведомление приходит в первые минуты. Ваш экипаж успевает приехать раньше конкурентов.</p>
           </article>
           <article class="card reveal">
             <div class="card__icon card__icon--green" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
             </div>
             <h3>Ничего не нужно отслеживать</h3>
-            <p>Не надо дежурить в чатах и искать события вручную. Уведомления приходят сами, круглосуточно.</p>
+            <p>Не надо дежурить в чатах и искать события вручную. Уведомления приходят сами.</p>
           </article>
           <article class="card reveal">
             <div class="card__icon card__icon--amber" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="10" x2="8.01" y2="10"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="16" y1="10" x2="16.01" y2="10"/></svg>
             </div>
             <h3>Вся служба в одном чате</h3>
-            <p>Уведомление видят все комиссары компании — на выезд отправляется тот, кто ближе.</p>
+            <p>Уведомление видят все комиссары компании - на выезд отправляется тот, кто ближе.</p>
           </article>
         </div>
       </div>
@@ -129,183 +284,265 @@
     <!-- ─── Как это работает ─────────────────────────────────────────── -->
     <section class="section section--alt" id="how">
       <div class="container">
-        <h2 class="section__title reveal">Как это работает</h2>
-        <p class="section__lead reveal">От происшествия до уведомления в вашем чате — несколько минут.</p>
+        <h2 class="section__title reveal">Как это работает?</h2>
+        <p class="section__lead reveal">От обнаружения ДТП до выезда экипажа - четыре простых шага.</p>
         <ol class="steps">
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">1</span>
-            <div class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-            </div>
-            <h3>Следим за городом</h3>
-            <p>Система круглосуточно отслеживает новые ДТП в вашем городе.</p>
+            <h3>Подключаем бота к чату</h3>
+            <p>Добавляем бота в чат вашей службы. От вас - только мессенджер, всю настройку берём на себя.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">2</span>
-            <div class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-            </div>
-            <h3>Отбираем только новые</h3>
-            <p>Повторы отсекаются автоматически: одно ДТП — одно уведомление, без спама.</p>
+            <h3>Наша система замечает ДТП</h3>
+            <p>Круглосуточно сканируем город, находим свежие аварии и отсекаем повторы: одно ДТП - одно уведомление, без спама.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">3</span>
-            <div class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </div>
-            <h3>Присылаем вам в чат</h3>
-            <p>В мессенджер службы приходит сообщение: время, адрес и координаты. Экипаж сразу видит, куда ехать.</p>
+            <h3>Отправляем уведомление в&nbsp;чат</h3>
+            <p>В чат службы приходит сообщение: адрес, время и координаты с кнопкой построения маршрута.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3>Аварийный комиссар выезжает на оформление</h3>
+            <p>Экипаж, который ближе всех, принимает вызов и едет на место - и забирает оформление себе.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ─── Лайв-чат с уведомлениями ─────────────────────────────────── -->
-    <section class="section">
-      <div class="container demo">
-        <div class="phone reveal">
-          <div class="phone__frame">
-            <div class="phone__screen">
-              <div class="phone__notch" aria-hidden="true"></div>
-              <div class="phone__status">
-                <span>16:26</span>
-                <span class="phone__icons" aria-hidden="true">
-                  <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0.5" width="3" height="11.5" rx="1"/></svg>
-                  <svg viewBox="0 0 16 12"><path d="M8 11.4 5.7 8.6a3.7 3.7 0 0 1 4.6 0L8 11.4Z"/><path d="M2.2 5.1a8.2 8.2 0 0 1 11.6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-                  <svg viewBox="0 0 26 12"><rect x="0.8" y="0.8" width="21" height="10.4" rx="3" fill="none" stroke="currentColor" stroke-width="1.3"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.8"/><rect x="23.2" y="4" width="2.2" height="4" rx="1.1"/></svg>
+    <!-- ─── Проблема: клиент уходит к конкуренту ─────────────────────── -->
+    <section class="section" id="pain">
+      <div class="container">
+        <div class="pain">
+          <div class="pain__main">
+            <h2 class="pain__title reveal">Пока вы ждёте - клиент уже <em>у конкурента</em></h2>
+            <p class="pain__lead reveal">
+              Окно возможностей после аварии узкое: участники стоят на дороге 20–40 минут,
+              потом уезжают, вызывают знакомых или оформляют европротокол сами.
+            </p>
+            <figure class="pain__quote reveal">
+              <span class="pain__quote-mark" aria-hidden="true">“</span>
+              <blockquote>
+                Раньше мы крутились по району наугад и брали <b style="white-space: nowrap;">3-4 выезда</b> в смену.
+                Теперь чат показывает, где авария, и мы успеваем <b style="white-space: nowrap;">в 2 раза чаще</b>.
+              </blockquote>
+              <footer>
+                <span class="pain__avatar" aria-hidden="true">АК</span>
+                <span class="pain__who">
+                  <b>Артём К.</b>
+                  <span>аварийный комиссар, 6 лет в профессии</span>
                 </span>
+              </footer>
+            </figure>
+          </div>
+
+          <ul class="pain__list">
+            <li class="pain__card reveal">
+              <span class="pain__card-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <h3>Вы не знаете, где сейчас ДТП</h3>
+                <p>Единственный способ узнать - случайно оказаться рядом или объезжать район вслепую. Бензин, время, нервы.</p>
               </div>
-
-              <div class="phone__head">
-                <span class="phone__avatar" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="10" x2="12" y2="14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17" r="1.1" fill="currentColor"/></svg>
-                </span>
-                <div class="phone__head-text">
-                  <strong>Чат вашей службы</strong>
-                  <small><span class="online" aria-hidden="true"></span>ДТП Информатор · бот · 6 участников</small>
-                </div>
+            </li>
+            <li class="pain__card reveal">
+              <span class="pain__card-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <h3>Опоздание на 5 минут = потерянный выезд</h3>
+                <p>Кто приехал первым, тот и оформляет. Второй экипаж обычно остаётся ни с чем - люди уже заняты.</p>
               </div>
-
-              <div class="phone__body">
-                <div class="msg msg--bot">
-                  <div class="msg__title">⚠️ Энтузиастов, 7</div>
-                  <span class="msg__btn">🛣 Построить маршрут</span>
-                </div>
-
-                <div class="msg msg--crew">
-                  <div class="msg__meta"><b>Экипаж 1</b><time>16:20</time></div>
-                  <p>Приняли, выезжаем 🚑</p>
-                </div>
-
-                <div class="msg msg--crew">
-                  <div class="msg__meta"><b>Экипаж 1</b><time>16:20</time></div>
-                  <p>На месте. Оформляем ✅</p>
-                </div>
-
-                <div class="msg msg--bot msg--alert msg--fresh">
-                  <div class="msg__title msg__title--alert">🚨 НОВОЕ ДТП</div>
-                  <div class="msg__address">ул. Садовая, 3</div>
-                  <span class="msg__btn">🛣 Построить маршрут</span>
-                </div>
-
-                <div class="msg msg--crew">
-                  <div class="msg__meta"><b>Экипаж 3</b><time>16:20</time></div>
-                  <p>Приняли, выезжаем 🚑</p>
-                </div>
-
-                <div class="msg msg--crew">
-                  <div class="msg__meta"><b>Экипаж 3</b><time>16:20</time></div>
-                  <p>На месте. Оформляем ✅</p>
-                </div>
+            </li>
+            <li class="pain__card reveal">
+              <span class="pain__card-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <div>
+                <h3>Команда работает несогласованно</h3>
+                <p>У каждого свой «источник» и свои слухи. Нет единой картины: двое едут на одну аварию, а вторая стоит пустая.</p>
               </div>
+            </li>
+            <li class="pain__card reveal">
+              <span class="pain__card-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+              </span>
+              <div>
+                <h3>Ночью и в плохую погоду - простой</h3>
+                <p>Именно тогда аварий больше всего, а информации меньше всего. Смена проходит «вхолостую».</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Калькулятор выгоды ───────────────────────────────────────── -->
+    <section class="section section--alt" id="calc">
+      <div class="container">
+        <div class="calc__head reveal">
+          <p class="calc__kicker">Экономика</p>
+          <h2 class="section__title">Калькулятор выгоды</h2>
+          <p class="section__lead">
+            Рассчитайте сколько вы&nbsp;получаете
+            сейчас и&nbsp;сколько могли&nbsp;бы, приезжая на&nbsp;ДТП первым. Разница между
+            этими цифрами и&nbsp;есть цена опоздания.
+          </p>
+        </div>
+        <div class="calc reveal">
+          <div class="calc__panel calc__inputs">
+            <div class="calc__sl">
+              <div class="calc__sl-top">
+                <label for="calc-s1">ДТП в вашем городе в сутки</label>
+                <span class="calc__sl-val" data-calc-label="accidents">18</span>
+              </div>
+              <input type="range" id="calc-s1" min="4" max="80" step="1" value="18" data-calc="accidents">
+              <p class="calc__hint">В среднем по городам-миллионникам - 20–40 аварий в сутки с оформлением</p>
+            </div>
+            <div class="calc__sl">
+              <div class="calc__sl-top">
+                <label for="calc-s2">Сколько из них берёте вы</label>
+                <span class="calc__sl-val" data-calc-label="share">12 %</span>
+              </div>
+              <input type="range" id="calc-s2" min="1" max="50" step="1" value="12" data-calc="share">
+              <p class="calc__hint">С нами доля растёт: вы видите аварию в первые минуты и приезжаете раньше коллег</p>
+            </div>
+            <div class="calc__sl">
+              <div class="calc__sl-top">
+                <label for="calc-s3">Средний чек за оформление</label>
+                <span class="calc__sl-val" data-calc-label="check">3 000 ₽</span>
+              </div>
+              <input type="range" id="calc-s3" min="1000" max="9000" step="100" value="3000" data-calc="check">
+              <p class="calc__hint">Базовое оформление + доп. услуги: эвакуатор, эксперт, аварийный комиссар</p>
+            </div>
+            <div class="calc__sl">
+              <div class="calc__sl-top">
+                <label for="calc-s4">Смен в месяце</label>
+                <span class="calc__sl-val" data-calc-label="shifts">22</span>
+              </div>
+              <input type="range" id="calc-s4" min="5" max="30" step="1" value="22" data-calc="shifts">
+              <p class="calc__hint">Считаем только те дни, когда вы реально выходите на линию</p>
             </div>
           </div>
-        </div>
 
-        <div class="demo__side">
-          <h2 class="section__title reveal">Так выглядит уведомление</h2>
-          <p class="demo__text reveal">
-            Бот присылает в чат службы сообщение о каждом новом ДТП: адрес, время
-            и кнопка построения маршрута. Экипаж видит уведомление сразу после
-            аварии и оперативно выезжает на место ДТП.
-          </p>
-          <ul class="demo__list reveal">
-            <li><span class="demo__list-ic demo__list-ic--red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><line x1="12" y1="10" x2="12" y2="14.5"/><circle cx="12" cy="17" r="1"/></svg></span><b>НОВОЕ ДТП</b> — адрес и время сразу в сообщении</li>
-            <li><span class="demo__list-ic demo__list-ic--amber"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></span>Кнопка «Построить маршрут» — ведёт к месту</li>
-            <li><span class="demo__list-ic demo__list-ic--green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Экипажи отвечают в чате: «приняли», «на месте»</li>
-            <li><span class="demo__list-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>Одно ДТП — одно уведомление, повторов нет</li>
-          </ul>
-          <p class="demo__note reveal">Чат подключаем в любом мессенджере: MAX, Telegram, WhatsApp или VK.</p>
+          <aside class="calc__panel calc__results">
+            <div>
+              <div class="calc__row"><span>Выездов в месяц</span><b data-calc-out="jobs">48</b></div>
+              <div class="calc__row"><span>Без нас</span><b data-calc-out="before">19 008 ₽</b></div>
+              <div class="calc__big">
+                <span class="calc__big-label">Ваш доход с нами</span>
+                <b data-calc-out="after">142 560 ₽</b>
+                <span class="calc__delta" data-calc-out="delta">+123 552 ₽ в месяц</span>
+              </div>
+            </div>
+
+            <div class="calc__compare">
+              <div class="calc__bar-row">
+                <span>Без сервиса (поиск наугад)</span><b data-calc-out="before2">19 008 ₽</b>
+              </div>
+              <div class="calc__bar calc__bar--muted"><i data-calc-bar="before" style="width: 13%"></i></div>
+              <div class="calc__bar-row">
+                <span>С ДТП Информатором (эксклюзив на город)</span><b data-calc-out="after2">142 560 ₽</b>
+              </div>
+              <div class="calc__bar"><i data-calc-bar="after" style="width: 100%"></i></div>
+            </div>
+
+            <button class="btn btn--primary btn--lg calc__btn" type="button" data-modal>Подключить бота бесплатно!</button>
+            <p class="calc__note">Расчёт приблизительный и не является публичной офертой. Результат зависит от числа экипажей в городе, вашей скорости реакции и сезона.</p>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- ─── Бесплатный тест ──────────────────────────────────────────── -->
+    <!-- ─── Оффер: 14 дней бесплатно ─────────────────────────────────── -->
     <section class="section section--alt" id="trial">
       <div class="container">
-        <h2 class="section__title reveal">14 дней бесплатно — <em>без обязательств</em></h2>
-        <p class="section__lead reveal">
-          Подключим ваш город и покажем систему на реальных ДТП.
-          Стоимость обсудим после теста — ничего списывать не будем.
-        </p>
-        <div class="grid grid--4">
-          <article class="trial reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3>Полный доступ</h3>
-            <p>Все уведомления по вашему городу без ограничений.</p>
-          </article>
-          <article class="trial reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3>Вся служба в чате</h3>
-            <p>Подключим всех комиссаров и экипажи компании.</p>
-          </article>
-          <article class="trial reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3>Подключим за вас</h3>
-            <p>От вас — только мессенджер. Всю настройку берём на себя.</p>
-          </article>
-          <article class="trial reveal">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3>Легко отказаться</h3>
-            <p>Не подойдёт — просто отключим. Без договоров и списаний.</p>
-          </article>
+        <div class="offer reveal">
+          <div class="offer__main">
+            <p class="offer__kicker">Специальное предложение раннего запуска</p>
+            <h2 class="offer__title">14 дней<br>бесплатно</h2>
+            <p class="offer__lead">
+              Мы собираем первую базу городов и обратную связь от комиссаров.
+              Поэтому всем, кто подключается сейчас, даём две недели без оплаты
+              и без лимитов - чтобы вы сами увидели разницу в числе выездов.
+            </p>
+            <ul class="offer__list">
+              <li>Подключим всех комиссаров</li>
+              <li>Всю настройку берём на себя</li>
+              <li>Если вам не понравится, то просто отключитесь</li>
+            </ul>
+            <button class="btn btn--primary btn--lg offer__btn" type="button" data-modal>Забрать 14 дней бесплатно <span aria-hidden="true">→</span></button>
+          </div>
+
+          <aside class="offer__side">
+            <!-- Цифры таймера, прогресса и цены - примеры: замените на реальные.
+                 Пул мест: 15 (константы TOTAL/START/END в main.js) -->
+            <div class="offer__panel">
+              <p class="offer__side-label">До конца бета-набора</p>
+              <div class="offer__clock" data-countdown>
+                <div class="offer__tile"><b data-unit="days">00</b><small>дней</small></div>
+                <div class="offer__tile"><b data-unit="hours">00</b><small>часов</small></div>
+                <div class="offer__tile"><b data-unit="minutes">00</b><small>минут</small></div>
+                <div class="offer__tile"><b data-unit="seconds">00</b><small>секунд</small></div>
+              </div>
+            </div>
+
+            <div class="offer__panel" data-places>
+              <div class="offer__places">
+                <span>Занято мест в&nbsp;потоке</span>
+                <b data-places-taken>10 / 15</b>
+              </div>
+              <div class="offer__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="67" aria-label="Занято мест в бета-потоке">
+                <i style="width: 67%"></i>
+              </div>
+              <p class="offer__bar-note">Свободных мест становится всё меньше - каждое занимает компания аваркомов в&nbsp;одном из&nbsp;городов.</p>
+            </div>
+
+            <div class="offer__panel">
+              <p class="offer__side-label">После бесплатного периода</p>
+              <p class="offer__price"><b>от 2 900 ₽</b><span> / мес за экипаж</span></p>
+              <p class="offer__price-note">Один успешно оформленный выезд обычно окупает месяц подписки.</p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- ─── Для кого ─────────────────────────────────────────────────── -->
-    <section class="section" id="who">
+    <!-- ─── Отзывы ─────────────────────────────────────────────────────
+         ВАЖНО: тексты ниже - шаблоны. Замените на реальные отзывы
+         клиентов перед публикацией (иначе - риск блокировки разметки
+         отзывов в поиске и недоверие посетителей). -->
+    <section class="section" id="reviews">
       <div class="container">
-        <h2 class="section__title reveal">Кому подходит</h2>
-        <div class="grid grid--4">
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            </div>
-            <h3>Компаниям комиссаров</h3>
-            <p>Стабильный поток выездов в своём городе.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            </div>
-            <h3>Службам с экипажами</h3>
-            <p>Сообщение видят все машины — выезжает ближайшая.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-            </div>
-            <h3>Тем, кто в нескольких городах</h3>
-            <p>Для каждого города — свой отдельный чат.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
-            </div>
-            <h3>ИП-комиссарам</h3>
-            <p>Постоянные выезды вместо случайных заказов.</p>
-          </article>
+        <h2 class="section__title reveal">Что говорят службы комиссаров</h2>
+        <p class="section__lead reveal">Нам доверяют службы в нескольких городах - вот их опыт после подключения.</p>
+        <div class="grid grid--3">
+          <figure class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <blockquote>«Информация о ДТП приходила отрывками от разных людей - кто-то скинет адрес, кто-то нет, и проверять некому. Сейчас бот присылает адрес - и экипаж едет. За первый месяц теста забрали 16 оформлений, которые раньше бы ушли конкурентам.»</blockquote>
+            <figcaption>
+              <b>Андрей С.</b>
+              <span>руководитель службы комиссаров, 6 экипажей</span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <blockquote>«Раньше узнавали об авариях от случайных источников - где-то кто-то скинет, где-то нет - и часто приезжали уже вторыми. С ДТП Информатором в большинстве случаев первыми на месте оказываемся мы - за два месяца выездов стало заметно больше.»</blockquote>
+            <figcaption>
+              <b>Дмитрий К.</b>
+              <span>служба комиссаров, 3 экипажа</span>
+            </figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="review__stars" aria-hidden="true">★★★★★</span>
+            <blockquote>«Подключили сразу три города - для каждого свой чат. Раньше сообщения о ДТП приходили из непроверенных источников, и часть из них оказывалась ложной. Теперь система сама присылает адрес и координаты, работает и ночью, и в выходные.»</blockquote>
+            <figcaption>
+              <b>Ольга М.</b>
+              <span>диспетчер службы, 3 города</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -316,28 +553,40 @@
         <h2 class="section__title reveal">Частые вопросы</h2>
         <div class="faq">
           <details class="reveal">
-            <summary>Как быстро приходит уведомление?</summary>
-            <p>Через несколько минут после ДТП. Точную скорость по вашему городу покажем на тесте — она зависит от настроенного интервала проверки.</p>
-          </details>
-          <details class="reveal">
-            <summary>Кто ещё получает уведомления по городу?</summary>
-            <p>У каждой службы — свой чат. Об условиях работы в городе договоримся лично в переписке.</p>
+            <summary>Нужно ли устанавливать приложение или сайт?</summary>
+            <p>Нет. Всё происходит внутри привычного мессенджера: вы добавляете бота в чат — и уведомления приходят туда же, где вы и так общаетесь с бригадой. Работает на любом телефоне, включая старые Android и кнопочные смартфоны с поддержкой мессенджеров.</p>
           </details>
           <details class="reveal">
             <summary>Нужно ли что-то устанавливать и настраивать?</summary>
-            <p>Нет. Всё подключим сами — вам нужен только мессенджер, в который будут приходить уведомления.</p>
+            <p>Нет. Всё подключим и настроим сами — от вас нужен только мессенджер, в который будут приходить уведомления.</p>
+          </details>
+          <details class="reveal">
+            <summary>Насколько быстро приходит уведомление?</summary>
+            <p>Обычно 1–8 минут с момента аварии: система замечает событие, отсекает повторы и сразу отправляет карточку в чат. Мониторинг круглосуточный — ночью и в выходные так же.</p>
+          </details>
+          <details class="reveal">
+            <summary>В какие мессенджеры можно подключить бота?</summary>
+            <p>Сейчас можно подключить ВКонтакте и MAX. Скоро добавим поддержку и остальных популярных мессенджеров.</p>
+          </details>
+          <details class="reveal">
+            <summary>Кто ещё получает уведомления по нашему городу?</summary>
+            <p>Никто. Для эксклюзивности мы подключаем только одну службу комиссаров в городе — у ваших конкурентов не будет доступа к уведомлениям по вашему городу. Поэтому иногда бывает лист ожидания: напишите нам и проверьте, свободен ли ещё ваш город.</p>
           </details>
           <details class="reveal">
             <summary>Мы работаем в нескольких городах. Так можно?</summary>
             <p>Да. Для каждого города — свой чат: комиссары каждого города видят только свои ДТП.</p>
           </details>
           <details class="reveal">
-            <summary>Работает ночью и в выходные?</summary>
-            <p>Да, круглосуточно, без выходных и праздников.</p>
+            <summary>Это законно? Не «слив» ли это данных ГИБДД?</summary>
+            <p>Это законно. Мы работаем только с открытой публичной информацией о дорожных событиях и не имеем доступа к закрытым базам и персональным данным.</p>
           </details>
           <details class="reveal">
-            <summary>Что после 14 дней теста?</summary>
-            <p>Условия обсудим лично. Во время теста никаких обязательств и списаний нет.</p>
+            <summary>Что нужно, чтобы начать, и сколько это займёт времени?</summary>
+            <p>Просто <button class="faq__link" type="button" data-modal>напишите нам в мессенджере</button> — мы подключим вас за 15 минут, без оплаты и договоров.</p>
+          </details>
+          <details class="reveal">
+            <summary>Что будет через 14 дней?</summary>
+            <p>Закончится тестовый период. Если система вам понравилась — предложим оплатить первый месяц, если нет — просто прекратим сотрудничество: без автопродлений и списаний.</p>
           </details>
         </div>
       </div>
@@ -347,9 +596,10 @@
     <section class="section" id="cta">
       <div class="container">
         <div class="cta reveal">
-          <img class="cta__logo" src="assets/logo-header.png" alt="ДТП Информатор — Будьте первыми на месте!" width="220" height="85">
+          <img class="cta__logo" src="assets/logo-header.png" alt="ДТП Информатор - Будьте первыми на месте!" width="220" height="85">
           <h2>Попробуйте 14 дней бесплатно</h2>
-          <p>Напишите в удобном мессенджере — ответим на вопросы и подключим ваш город.</p>
+          <p>Напишите в удобном мессенджере - ответим на вопросы и подключим ваш город.</p>
+          <p class="cta__urgency">⚡ <b>Осталось 3 бесплатных слота</b> на подключение в этом месяце</p>
           <ul class="msn msn--center" aria-label="Связаться в мессенджере">
             <!-- Ссылки-заглушки: заменить # на реальные контакты -->
             <li><a class="msn__link" href="#" data-messenger="MAX"><img class="msn__img" src="assets/max-mark-color.png" alt="" width="16" height="16">MAX</a></li>
@@ -376,11 +626,20 @@
         <a href="#value">Преимущество</a>
         <a href="#how">Как работает</a>
         <a href="#trial">Тест 14 дней</a>
+        <a href="#reviews">Отзывы</a>
         <a href="#faq">Вопросы</a>
       </nav>
       <small class="footer__copy">© <span data-year>2026</span> ДТП Информатор</small>
     </div>
   </footer>
+
+  <!-- ─── Липкая CTA на мобильных ─────────────────────────────────── -->
+  <div class="sticky-cta">
+    <div class="sticky-cta__box">
+      <button class="btn btn--primary sticky-cta__btn" type="button" data-modal>Написать в мессенджере</button>
+      <small>Ответим за 15 минут · 14 дней бесплатно</small>
+    </div>
+  </div>
 
   <!-- ─── Модальное окно: написать нам в мессенджере ───────────────── -->
   <div class="modal" id="contact-modal" hidden>
