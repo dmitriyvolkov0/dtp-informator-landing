@@ -86,6 +86,12 @@ a { color: inherit; }
 }
 .btn--ghost:hover { border-color: rgba(148, 163, 184, 0.35); background: rgba(148, 163, 184, 0.1); }
 
+/* ── Акцент в тексте: фирменный красный ──────────────────────── */
+.accent {
+  color: var(--red-2);
+  font-weight: 700;
+}
+
 /* ── Шапка ────────────────────────────────────────────────────── */
 .header {
   position: fixed;
@@ -1579,11 +1585,21 @@ a { color: inherit; }
   .grid--3, .grid--4 { grid-template-columns: 1fr; }
   .section { padding: 64px 0; }
   .hero { padding-top: calc(var(--header-h) + 48px); }
+  /* hero: кнопки на всю ширину, подпись по центру */
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+  .hero__note { text-align: center; }
+  /* мокап телефона чуть компактнее */
+  .hero__phone { max-width: 280px; }
+  .hero__phone .phone__screen { height: 470px; }
+  /* кнопки калькулятора и оффера — внутренние отступы 16px */
+  .calc__btn,
+  .offer__btn { padding-inline: 16px; }
   .hero__stats { gap: 16px 24px; }
   .logo__text small { display: none; }
   .footer__inner { flex-direction: column; text-align: center; }
   .footer__nav { justify-content: center; }
-  .footer { padding-bottom: 96px; }
+  .footer { padding-bottom: 32px; }
 
   /* липкая кнопка появляется только на мобильных (показом управляет JS) */
   .sticky-cta {

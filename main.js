@@ -125,6 +125,20 @@
     // ширина полосы — доля занятых мест в процентах (6 из 10 = 60%)
     const pct = Math.round(taken / TOTAL * 100);
 
+    // в финальном CTA показываем, сколько мест осталось (с правильным падежом)
+    const ctaPlaces = document.querySelector('[data-cta-places]');
+    if (ctaPlaces) {
+      const left = Math.max(0, TOTAL - taken);
+      const mod10 = left % 10;
+      const mod100 = left % 100;
+      const noun = mod10 === 1 && mod100 !== 11
+        ? 'бесплатное место'
+        : mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)
+          ? 'бесплатных места'
+          : 'бесплатных мест';
+      ctaPlaces.textContent = 'Осталось ' + left + ' ' + noun;
+    }
+
     // полоса и цифра «оживают» при появлении панели на экране
     const runPlaces = () => {
       fill.style.width = pct + '%';
