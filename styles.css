@@ -210,7 +210,7 @@ a { color: inherit; }
 .hero__phone .phone__screen { height: 540px; }
 @media (min-width: 1060px) {
   .hero__inner {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) 344px;
     align-items: center;
     gap: 56px;
   }
@@ -1589,9 +1589,9 @@ a { color: inherit; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { width: 100%; }
   .hero__note { text-align: center; }
-  /* мокап телефона чуть компактнее */
-  .hero__phone { max-width: 280px; }
-  .hero__phone .phone__screen { height: 470px; }
+  /* мокап телефона чуть компактнее по высоте, но не уже колонки */
+  .hero__phone { max-width: 320px; }
+  .hero__phone .phone__screen { height: 520px; }
   /* кнопки калькулятора и оффера — внутренние отступы 16px */
   .calc__btn,
   .offer__btn { padding-inline: 16px; }
